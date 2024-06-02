@@ -1,14 +1,18 @@
-import healthRate from "../life.js"
+import sortHeroesByHealth from "../sort.js"
 
 // eslint-disable-next-line no-undef
-test.each([
-    ["Маг", 51, "healthy"],
-    ["Маг", 50, "critical"],
-    ["Маг", 15, "wounded"]
-]) (
-("проверка уровня здоровья"),
-(name, health, expected) => {
-    const result = healthRate(health);
-    // eslint-disable-next-line no-undef
-    expect(result).toBe(expected);
-})
+test('сортировка героев по уровню здоровья', () => {
+    const heroes = [
+        { name: 'мечник', health: 10 },
+        { name: 'маг', health: 100 },
+        { name: 'лучник', health: 80 },
+    ];
+  
+const sortedHeroes = sortHeroesByHealth(heroes);
+// eslint-disable-next-line no-undef
+expect(sortedHeroes).toEqual([
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 80 },
+    { name: 'мечник', health: 10 },
+    ]);
+});
