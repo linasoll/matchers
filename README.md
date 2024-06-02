@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/0g6hs0hij259mv46?svg=true)](https://ci.appveyor.com/project/linasoll/test-func)
